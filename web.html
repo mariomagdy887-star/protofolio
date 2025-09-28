@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .pricing-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .plan {
+      background: #fff;
+      border-radius: 8px;
+      padding: 30px 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .plan.pro {
+      background: #2f9ca3;
+      color: #fff;
+    }
+
+    .plan h2 {
+      margin-bottom: 5px;
+    }
+
+    .plan p {
+      margin: 5px 0 20px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .basic .circle {
+      background: #e74c3c;
+    }
+
+    .pro .circle {
+      background: white;
+      color: #2f9ca3;
+    }
+
+    .features {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    .features hr {
+      margin: 15px 0;
+      border: none;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .plan.pro .features hr {
+      border-top: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .basic .btn {
+      background: #e74c3c;
+      color: white;
+    }
+
+    .pro .btn {
+      background: #48c5c7;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="pricing-container">
+    <!-- Basic Plan -->
+    <div class="plan basic">
+      <h2>Basic Plan</h2>
+      <p>This is photoshop's version</p>
+      <div class="circle">$30/m</div>
+      <div class="features">
+        <div>Number of downloads<br><strong>30</strong></div>
+        <hr>
+        <div>Video support<br><strong>Yes</strong></div>
+        <hr>
+        <div>Operation system<br><strong>Android</strong></div>
+      </div>
+      <button class="btn">Select Plan</button>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="plan pro">
+      <h2>Pro Plan</h2>
+      <p>This is photoshop's version</p>
+      <div class="circle">$90/m</div>
+      <div class="features">
+        <div>Number of downloads<br><strong>99</strong></div>
+        <hr>
+        <div>Video support<br><strong>Yes</strong></div>
+        <hr>
+        <div>Operation system<br><strong>Android</strong></div>
+      </div>
+      <button class="btn">Select Plan</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flat Clock with Gradient Background</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #009688, #26a69a); 
+    
+    }
+
+    .clock {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background: #fff;
+      border: 12px solid #4dd0e1; 
+      border-radius: 50%;
+      box-shadow: 30px 30px 0 rgba(0, 0, 0, 0.2); 
+    }
+
+
+    .mark {
+      position: absolute;
+      width: 4px;
+      height: 20px;
+      background: #000;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .mark.top { top: 0; -webkit-box-reflect: below 260px; }
+    .mark.left { width: 20px; height: 4px; left: 3%; top: 50%; -webkit-box-reflect: right 260px; }
+
+    .hand {
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform-origin: bottom center;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .hour {
+      width: 6px;
+      height: 70px;
+      background: #000;
+      transform: translateX(-50%) rotate(120deg);
+    }
+
+    .minute {
+      width: 4px;
+      height: 100px;
+      background: #000;
+      transform: translateX(-50%) rotate(300deg);
+    }
+
+    .second {
+      width: 2px;
+      height: 110px;
+      background: red;
+      transform: translateX(-50%) rotate(15deg);
+    }
+
+    .center {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: #000;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="clock">
+    <div class="mark top"></div>
+    <div class="mark left"></div>
+
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>
+
+    <div class="center"></div>
+  </div>
+</body>
+</html>

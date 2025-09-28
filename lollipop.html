@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robot Face</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #2e7d32; /* green background */
+    }
+
+    .robot {
+      position: relative;
+      width: 200px;
+      height: 180px;
+      background-image: linear-gradient(black 0% 20% , #14f078 20%);
+      border-radius: 10px 10px 50% 50%;
+     
+    }
+
+
+    /* Eyes */
+    .eye {
+      position: absolute;
+      top: 65px;
+      width: 40px;
+      height: 40px;
+      background: #111;
+      border-radius: 50%;
+    }
+    .eye::after {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border-radius: 50%;
+    }
+    .eye.left { left: 40px; }
+    .eye.right { right: 40px; }
+
+    /* Mouth */
+    .mouth {
+      position: absolute;
+      bottom: 35px;
+      left: 35%;
+      border-radius: 0 0 45px 45px ;
+      width: 60px;
+      height: 30px;
+      background: #111;
+    }
+
+    /* Side handles */
+    .handle {
+      position: absolute;
+      top: 75px;
+      width: 25px;
+      height: 12px;
+      background: #111;
+    }
+    .handle.left { left: -25px; }
+    .handle.right { right: -25px; }
+
+.handle2 {
+      position: absolute;
+      top: 68px;
+      width: 12px;
+      height: 25px;
+      background: #111;
+      border-radius: 5px;
+    }
+    .handle2.left { left: -25px; }
+    .handle2.right { right: -25px; }
+    /* Bottom handle */
+    .bottom {
+      position: absolute;
+      bottom: -68px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 70px;
+      background: #111;
+      border-radius: 0 0 10px 10px;
+  
+    }
+
+  </style>
+</head>
+<body>
+  <div class="robot">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+    <div class="handle left"></div>
+     <div class="handle2 left"></div>
+    <div class="handle right"></div>
+    <div class="handle2 right"></div>
+    <div class="bottom"></div>
+  </div>
+</body>
+</html>
